@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "99f9a955-05a5-49a7-81c4-6ae467a55390",
+		"name": "API_Testing_Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all todo entries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"entry\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/todo",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all todo entries",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/todo",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"todo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 May 2021 21:04:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.29 (Ubuntu)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "psx"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "60"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "60"
+						},
+						{
+							"key": "warning",
+							"value": "199 PSX \"Resource is in development\""
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2463"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalResults\": \"31\",\n    \"entry\": [\n        {\n            \"id\": \"1\",\n            \"status\": \"1\",\n            \"title\": \"Task 1\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"2\",\n            \"status\": \"1\",\n            \"title\": \"Task 2\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"3\",\n            \"status\": \"1\",\n            \"title\": \"Task 3\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"4\",\n            \"status\": \"1\",\n            \"title\": \"Task 4\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"5\",\n            \"status\": \"1\",\n            \"title\": \"Task 5\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"6\",\n            \"status\": \"1\",\n            \"title\": \"Task 6\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"7\",\n            \"status\": \"1\",\n            \"title\": \"Task 7\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"8\",\n            \"status\": \"1\",\n            \"title\": \"Task 8\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"9\",\n            \"status\": \"1\",\n            \"title\": \"Task 9\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"10\",\n            \"status\": \"1\",\n            \"title\": \"Task 10\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"11\",\n            \"status\": \"1\",\n            \"title\": \"Task 11\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"12\",\n            \"status\": \"1\",\n            \"title\": \"Task 12\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"13\",\n            \"status\": \"1\",\n            \"title\": \"Task 13\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"14\",\n            \"status\": \"1\",\n            \"title\": \"Task 14\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"15\",\n            \"status\": \"1\",\n            \"title\": \"Task 15\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        },\n        {\n            \"id\": \"16\",\n            \"status\": \"1\",\n            \"title\": \"Task 16\",\n            \"insertDate\": \"2021-02-13 22:15:17\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get a single todo data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"title\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Date\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/?todo_id=2",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "todo_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get a single todo data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseURL}}/?todo_id=2",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "todo_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 May 2021 21:06:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.29 (Ubuntu)"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "psx"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "60"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "59"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1732"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apiVersion\": \"5.0.2.0\",\n    \"title\": \"Fusio\",\n    \"categories\": [\n        \"authorization\",\n        \"system\",\n        \"consumer\",\n        \"backend\",\n        \"default\"\n    ],\n    \"scopes\": [\n        \"default\",\n        \"todo\"\n    ],\n    \"apps\": {\n        \"developer\": \"https://demo.fusio-project.org/apps/developer\",\n        \"documentation\": \"https://demo.fusio-project.org/apps/documentation\",\n        \"fusio\": \"https://demo.fusio-project.org/apps/fusio\",\n        \"swagger-ui\": \"https://demo.fusio-project.org/apps/swagger-ui\",\n        \"vscode\": \"https://demo.fusio-project.org/apps/vscode\"\n    },\n    \"links\": [\n        {\n            \"rel\": \"root\",\n            \"href\": \"https://demo.fusio-project.org/\"\n        },\n        {\n            \"rel\": \"openapi\",\n            \"href\": \"https://demo.fusio-project.org/system/export/openapi/*/*\"\n        },\n        {\n            \"rel\": \"documentation\",\n            \"href\": \"https://demo.fusio-project.org/system/doc\"\n        },\n        {\n            \"rel\": \"route\",\n            \"href\": \"https://demo.fusio-project.org/system/route\"\n        },\n        {\n            \"rel\": \"health\",\n            \"href\": \"https://demo.fusio-project.org/system/health\"\n        },\n        {\n            \"rel\": \"jsonrpc\",\n            \"href\": \"https://demo.fusio-project.org/system/jsonrpc\"\n        },\n        {\n            \"rel\": \"oauth2\",\n            \"href\": \"https://demo.fusio-project.org/authorization/token\"\n        },\n        {\n            \"rel\": \"whoami\",\n            \"href\": \"https://demo.fusio-project.org/authorization/whoami\"\n        },\n        {\n            \"rel\": \"about\",\n            \"href\": \"https://www.fusio-project.org\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "create new record in database",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+							"});\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/user",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create new record in database",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/user",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 May 2021 21:08:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"33-gucgFRlBHhlxLZz8IRgdrMEN+lQ\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0a60b4374200004c3d6b91a000000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=jFAodrMBX7V2hKi7O38Q4ocewvreVWfaYYryLjqhKMvbxXNVMKA5b62gSfVOrvv1CghnI2xJXIgjyVxeuSHB56AhKs8bekzbrtNpwrwbY3w0%2FKPHdaxe\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "657aefd20aa34c3d-AMS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"512\",\n    \"createdAt\": \"2021-05-30T21:08:16.373Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update a user record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"updatedAt\");\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Server\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/user/2",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update a user record",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/user/2",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 May 2021 21:09:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"28-mTYPr4le5O73gByIOITYomQDgNA\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0a60b5ac0300004c3d3b823000000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=9bINmFLXe6uTUQfoNh%2BiU%2F9At6DUZau%2FWUZWcerfe3sJK%2Fn95%2B65hwZ9JwpeHjZSaxgz0Aqo4aUSVlMYv5N2zoqHPbf%2BqI0jHJBMmpyAZte%2BvbsJqIRc\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "657af2266e1a4c3d-AMS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"updatedAt\": \"2021-05-30T21:09:51.792Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete a user record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"NEL\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/api/user/2",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete a user record",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Base_URL}}/api/user/2",
+							"host": [
+								"{{Base_URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 May 2021 21:11:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "cf-request-id",
+							"value": "0a60b6c7b500004c3d6e3e7000000001"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v2?s=eOKFF8WwpYNfoK9g%2FxPYYxF5p2IdY3es6GI0zDzG9e5kd%2F2NqFZYyYxrZ28RS4%2FZRY1l3Ot7Cbobr04lBdHUrwoAgmpGlXnX3PhRPfOGJbpZgOOdCTWE\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "657af3ec5df74c3d-AMS"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
