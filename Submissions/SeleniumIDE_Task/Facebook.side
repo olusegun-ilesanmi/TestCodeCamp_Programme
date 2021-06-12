@@ -47,7 +47,7 @@
         ["xpath=//form[@id='u_0_g_bl']/div/div/input", "xpath:idRelative"],
         ["xpath=//div/input", "xpath:position"]
       ],
-      "value": "arowolojessica77@gmail.com"
+      "value": "username1"
     }, {
       "id": "17153215-1f8d-430a-ac22-6a61495591b3",
       "comment": "",
@@ -75,7 +75,7 @@
         ["xpath=//div[@id='passContainer']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "ArowoloOpeyemi2797"
+      "value": "dummypass"
     }, {
       "id": "d13f5ce9-a847-4154-851b-2a3e913d19e6",
       "comment": "",
@@ -136,7 +136,7 @@
         ["xpath=//form[@id='u_0_i_bm']/div/div/input", "xpath:idRelative"],
         ["xpath=//div/input", "xpath:position"]
       ],
-      "value": "arowolojessica77@gmail.com"
+      "value": "username1"
     }, {
       "id": "ce27a9a5-10de-4bb9-b8e0-4400da82b458",
       "comment": "",
@@ -164,7 +164,7 @@
         ["xpath=//div[@id='passContainer']/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "ArowoloOpeyemi2797"
+      "value": "dummypass"
     }, {
       "id": "901f0300-0a35-4012-83d7-b241734fb00b",
       "comment": "",
