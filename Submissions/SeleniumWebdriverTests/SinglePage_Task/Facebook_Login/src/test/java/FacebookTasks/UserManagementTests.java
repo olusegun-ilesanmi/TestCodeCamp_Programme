@@ -27,7 +27,7 @@ public class UserManagementTests {
     }
 
     @Test
-    public void loginTests () throws InterruptedException {
+         public void loginTests () throws InterruptedException {
         //click on the username field and input a valid username "samsfoodng"
         driver.findElement(By.id("email")).sendKeys("samsfoodng");
         //click on the password field and input a valid password "alliswell17"
@@ -42,6 +42,24 @@ public class UserManagementTests {
             System.out.println("FAILED - User was unable to Login");
         }
         Thread.sleep(5000);
+    }
+
+    @Test
+         public void logoutTests () throws InterruptedException {
+        //Click on Account
+         driver.manage().window().fullscreen();
+         driver.findElement(new By.ByCssSelector("div[aria-label='Account']")).click();
+         Thread.sleep(5000);
+         //Click on Log Out button
+         driver.findElement(By.xpath("//span [text()=\"Log Out\"]")).click();
+         //Check if User Logged out
+         if(driver.getCurrentUrl().contains("https://web.facebook.com/")) {
+            System.out.println("PASSED - User has Logged Out");
+         }else {
+            System.out.println("FAILED - User was unable to Logout");
+         }
+         Thread.sleep(5000);
+
     }
 
     @AfterTest
